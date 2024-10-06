@@ -12,18 +12,18 @@ final class ViewController: UIViewController {
     private var counter: Int = 0
     private var history: String = ""
 
+    @IBOutlet weak private var minusButton: UIButton!
+    @IBOutlet weak private var zeroButton: UIButton!
+    @IBOutlet weak private var plusButton: UIButton!
+    @IBOutlet weak private var historyTextView: UITextView!
+    @IBOutlet weak private var counterLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         history = "История изменений:\n"
         historyTextView.text = history
         counterLabel.text = "Значение счётчика: \(counter)"
     }
-
-    @IBOutlet weak private var minusButton: UIButton!
-    @IBOutlet weak private var zeroButton: UIButton!
-    @IBOutlet weak private var plusButton: UIButton!
-    @IBOutlet weak private var historyTextView: UITextView!
-    @IBOutlet weak private var counterLabel: UILabel!
 
     private func dateConverterMoscow() -> String {
         let currentDate = Date()
